@@ -19,7 +19,7 @@ export const CustomNavBar = () => {
         >
             <Navbar.Brand >
                 <img
-                    src="/React.webp"
+                    src="/public/React.webp"
                     className="mr-3 h-6 sm:h-9"
                     alt="React Logo"
                 />
@@ -28,25 +28,13 @@ export const CustomNavBar = () => {
                 </span>
             </Navbar.Brand>
             <Navbar.Toggle />
-            <Navbar.Collapse className="items-center">
-                <NavLink
-                    
-                    to="/"
-                >
-                    Home
-                </NavLink>
-                <NavLink to="/dc">
-                    DC
-                </NavLink>
-                <NavLink to="/marvel">
-                    Marvel
-                </NavLink>
-                <NavLink to="/search">
-                    Search
-                </NavLink>
-                <button className='bg-blue-700 text-white text-base rounded-md w-16 h-6'
-                        onClick={handleLogout}
-                >
+            <Navbar.Collapse>
+                <NavLink to="/"> Home </NavLink>
+                <NavLink to="/dc"> DC </NavLink>
+                <NavLink to="/marvel"> Marvel </NavLink>
+                <NavLink to="/search"> Search </NavLink>
+                <button className='bg-blue-700 text-white text-base rounded-md w-16 h-6 place-self-center'
+                        onClick={handleLogout}>
                     Logout
                 </button>
             </Navbar.Collapse>

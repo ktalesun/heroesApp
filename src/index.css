@@ -5,3 +5,7 @@
 .active {
     @apply border-b border-[#61DBFB];
 }
+
+.main-text {
+    @apply text-[#64DBFB]
+}

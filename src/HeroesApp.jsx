@@ -3,7 +3,7 @@ import { AppRouter } from './routers/AppRouter'
 
 export const HeroesApp = () => {
   return (
-    <div className='text-3xl font-bold'>
+    <div className=''>
         
         <AppRouter />
 

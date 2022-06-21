@@ -1,11 +1,13 @@
 import React from 'react'
-import { CustomNavBar } from '../components/ui/CustomNavBar'
+import { CustomNavBar } from '../heroes/components/ui/CustomNavBar'
 
-import { DcScreen } from '../components/dc/DcScreen';
-import { MarvelScreen } from '../components/marvel/MarvelScreen';
-import { SearchScreen } from '../components/search/SearchScreen';
+import { DcScreen } from '../heroes/components/dc/DcScreen';
+import { MarvelScreen } from '../heroes/components/marvel/MarvelScreen';
+import { SearchScreen } from '../heroes/components/search/SearchScreen';
 import { Route, Routes } from 'react-router-dom';
-import { HeroScreen } from '../components/hero/HeroScreen';
+import { HeroScreen } from '../heroes/components/hero/HeroScreen';
+import { PageError } from '../heroes/components/404/PageError';
+import { HomePage } from '../heroes/components/home/HomePage';
 
 export const DashboardRoutes = () => {
     
@@ -13,13 +15,14 @@ export const DashboardRoutes = () => {
         <>
             <CustomNavBar />
             
-            <div className='container mx-auto mt-8'>
+            <div className='container mx-auto mt-8 w-full'>
                 <Routes>
-                    <Route path="/" element={<MarvelScreen />} />
+                    <Route path="/" element={<HomePage />} />
                     <Route path="marvel" element={<MarvelScreen />} />
                     <Route path="dc" element={<DcScreen />} />
                     <Route path="search" element={<SearchScreen />} />
-                    <Route path="hero" element={<HeroScreen />} />
+                    <Route path="hero/:heroId" element={<HeroScreen />} />
+                    <Route path="error404" element={<PageError />} />
                 </Routes>
             </div>
         </>
