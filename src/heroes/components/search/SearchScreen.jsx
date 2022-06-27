@@ -29,6 +29,7 @@ export const SearchScreen = () => {
     navigate(`?q=${searchText}`);
   }
 
+
   return (
     <article className='flex flex-col gap-4 p-4 lg:flex-row'>
       <section className='grow'>

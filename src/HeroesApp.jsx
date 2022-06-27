@@ -1,12 +1,13 @@
 import React from 'react'
 import { AppRouter } from './routers/AppRouter'
+import { AuthProvider } from './auth'
 
 export const HeroesApp = () => {
   return (
-    <div className=''>
+    <AuthProvider>
         
         <AppRouter />
 
-    </div>
+    </AuthProvider>
   )
 }
